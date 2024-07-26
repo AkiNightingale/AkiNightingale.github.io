@@ -19,8 +19,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "NODE_OPTIONS=--openssl-legacy-provider react-scripts build",
-    "deploy": "NODE_OPTIONS=--openssl-legacy-provider gh-pages -d build -b gh-pages --repo https://${GITHUB_TOKEN}@github.com/AkiNightingale/test-layout.git",
+    "build": "react-scripts build",
+    "deploy": "gh-pages -d build",
     "predeploy": "npm run build"
   },
   "eslintConfig": {
