@@ -6,7 +6,7 @@
     flex-direction: column;
     background: linear-gradient(196.2deg, $color-dark-blue 0%, $color-blue 100%);
     color: white;
-    overflow: auto;
+    overflow: hidden;
     width: 100%;
     max-width: 78rem; // 1248px
     margin: 0 auto;
@@ -28,6 +28,7 @@
     justify-content: center;
     padding: 1rem;
     text-align: center;
+    overflow: auto;
   }
 
   @media (max-width: 768px) {
