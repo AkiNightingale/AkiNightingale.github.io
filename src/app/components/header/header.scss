@@ -1,3 +1,5 @@
+@import "assets/styles/colors";
+
 @keyframes gradientAnimation {
   0% {
     background-position: 100% 0;
@@ -36,7 +38,7 @@
       display: inline-block;
       font-size: 1.125rem;
       line-height: 1.35rem;
-      background: linear-gradient(98.25deg, #EBFF00 18.56%, #FF70D9 76.02%);
+      background: linear-gradient(98.25deg, $color-yellow 18.56%, $color-rose 76.02%);
       background-size: 200% 100%;
       -webkit-background-clip: text;
       -webkit-text-fill-color: white;
@@ -68,7 +70,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: linear-gradient(140.47deg, rgba(235, 255, 0, 0.6) 26.02%, rgba(255, 112, 217, 0.6) 90.57%);
+      background: linear-gradient(140.47deg, $color-yellow 26.02%, $color-rose 90.57%);
       background-size: 200% 100%;
       mask: url('../../../assets/images/bucket.svg') no-repeat center;
       mask-size: contain;

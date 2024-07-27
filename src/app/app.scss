@@ -1,8 +1,10 @@
+@import "assets/styles/colors";
+
 .app {
   &__container {
     display: flex;
     flex-direction: column;
-    background: linear-gradient(196.2deg, #0D1E48 0%, #304571 100%);
+    background: linear-gradient(196.2deg, $color-dark-blue 0%, $color-blue 100%);
     color: white;
     overflow: auto;
     width: 100%;
