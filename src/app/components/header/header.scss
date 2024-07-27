@@ -1,0 +1,108 @@
+@keyframes gradientAnimation {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  padding: 1.5rem 5.063rem 1.306rem 5.063rem;
+
+  &__logo {
+    width: 6.5rem;
+    height: 2.194rem;
+    pointer-events: none;
+  }
+
+  &__button {
+    position: relative;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    overflow: hidden;
+    display: inline-block;
+    text-align: center;
+    color: white;
+
+    &._home {
+      width: 4.813rem;
+      text-align: start;
+      margin-right: 1.688rem;
+
+      @media (max-width: 768px) {
+        text-align: center;
+        margin: initial;
+      }
+    }
+
+    &._product {
+      width: 6.375rem;
+      text-align: start;
+      margin-right: 1.813rem;
+
+      @media (max-width: 768px) {
+        text-align: center;
+        margin: initial;
+      }
+    }
+
+    &:hover .header__button-text {
+      background-position: 100% 0;
+      -webkit-text-fill-color: transparent;
+      animation: gradientAnimation 1s linear 0.5s infinite running;
+    }
+
+    &-text {
+      display: inline-block;
+      font-size: 1.125rem;
+      line-height: 1.35rem;
+      background: linear-gradient(98.25deg, #EBFF00 18.56%, #FF70D9 76.02%);
+      background-size: 200% 100%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: white;
+      transition: background-position 0.3s ease, -webkit-text-fill-color 0.3s ease;
+      animation: none;
+    }
+  }
+}
+
+.stackCustom {
+  gap: 0 !important;
+
+  @media (max-width: 768px) {
+    gap: 1.875rem !important;
+  }
+
+  @media (max-width: 360px) {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 1.75rem 1.875rem;
+
+    &__logo {
+      width: 4.444rem;
+      height: 1.5rem;
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .header {
+    padding: 0.75rem 1.25rem;
+
+    &__logo {
+      width: 4.444rem;
+      height: 1.5rem;
+    }
+  }
+}
