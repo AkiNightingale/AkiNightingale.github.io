@@ -2,14 +2,11 @@ import React from 'react';
 
 import './stack.scss';
 
-interface StackProps {
+interface StackProps extends React.HTMLAttributes<HTMLDivElement> {
   direction?: 'row' | 'column';
   gap?: number;
   alignItems?: 'flex-start' | 'center' | 'flex-end' | 'stretch';
   justifyContent?: 'flex-start' | 'center' | 'flex-end' | 'space-between' | 'space-around';
-  className?: string;
-  style?: React.CSSProperties;
-  children: React.ReactNode;
 }
 
 const Stack: React.FC<StackProps> = ({

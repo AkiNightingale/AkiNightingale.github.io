@@ -12,7 +12,7 @@
     gap: 3.875rem !important;
     padding: 3.625rem 5rem 3.75rem;
 
-    @include down(md) {
+    @include between(sm, md) {
       gap: 3.438rem !important;
       padding: 3.438rem 1.875rem 3.313rem;
     }

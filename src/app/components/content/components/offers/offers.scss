@@ -1,6 +1,6 @@
 @import "assets/styles/breakpoints";
 
-.info {
+.offers {
   &__title {
     font-size: 2rem;
     line-height: 2.4rem;
@@ -13,22 +13,6 @@
     @include down(sm) {
       font-size: 1.125rem;
       line-height: 1.35rem;
-    }
-  }
-
-  &__text {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-    opacity: 60%;
-
-    @include between(sm, md) {
-      font-size: 1rem;
-      line-height: 1.2rem;
-    }
-
-    @include down(sm) {
-      font-size: 0.875rem;
-      line-height: 1.05rem;
     }
   }
 }
