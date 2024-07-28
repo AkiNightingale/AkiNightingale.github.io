@@ -1,4 +1,4 @@
-# Demo SPA Layout
+# Demo SPA
 
 The project is written as a demonstration of layout capabilities, with minimal active functionality using React.
 
