@@ -5,4 +5,19 @@
   justify-content: center;
   flex-direction: column;
   overflow: auto;
+
+  &__container {
+    gap: 3.875rem !important;
+    padding: 3.625rem 5rem 3.75rem;
+
+    @media (max-width: 768px) {
+      gap: 3.438rem !important;
+      padding: 3.438rem 1.875rem 3.313rem;
+    }
+
+    @media (max-width: 360px) {
+      gap: 3.125rem !important;
+      padding: 3.125rem 1.25rem;
+    }
+  }
 }

@@ -1,5 +1,6 @@
-import { Banner } from './components';
 import React from 'react';
+import { Stack } from 'ui-kit';
+import { Banner, Info } from './components';
 import './content.scss';
 
 const Content: React.FC = () => {
@@ -7,7 +8,10 @@ const Content: React.FC = () => {
     <main className='content'>
       <Banner />
 
-      <div> grid </div>
+      <Stack className='content__container'>
+        <div> grid </div>
+        <Info />
+      </Stack>
     </main>
   );
 };
