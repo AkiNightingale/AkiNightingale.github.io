@@ -5,47 +5,47 @@
     /* Note: for children if needed */
   }
 
-  &--row {
+  &_row {
     flex-direction: row;
   }
 
-  &--column {
+  &_column {
     flex-direction: column;
   }
 
-  &--align-start {
+  &_align-start {
     align-items: flex-start;
   }
 
-  &--align-center {
+  &_align-center {
     align-items: center;
   }
 
-  &--align-end {
+  &_align-end {
     align-items: flex-end;
   }
 
-  &--align-stretch {
+  &_align-stretch {
     align-items: stretch;
   }
 
-  &--justify-start {
+  &_justify-start {
     justify-content: flex-start;
   }
 
-  &--justify-center {
+  &_justify-center {
     justify-content: center;
   }
 
-  &--justify-end {
+  &_justify-end {
     justify-content: flex-end;
   }
 
-  &--justify-between {
+  &_justify-between {
     justify-content: space-between;
   }
 
-  &--justify-around {
+  &_justify-around {
     justify-content: space-around;
   }
 }

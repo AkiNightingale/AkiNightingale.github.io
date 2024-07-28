@@ -1,4 +1,5 @@
 @import "assets/styles/colors";
+@import "assets/styles/breakpoints";
 
 @keyframes gradientAnimation {
   0% {
@@ -101,7 +102,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@include down(md) {
   .header {
     padding: 1.75rem 1.875rem;
 
@@ -116,7 +117,7 @@
   }
 }
 
-@media (max-width: 360px) {
+@include down(sm) {
   .header {
     padding: 0.75rem 1.25rem;
 

@@ -1,4 +1,5 @@
 @import "assets/styles/colors";
+@import "assets/styles/breakpoints";
 
 .banner {
   display: flex;
@@ -11,11 +12,11 @@
   background-attachment: scroll, scroll;
   align-items: center;
 
-  @media (max-width: 768px) {
+  @include down(md) {
     background-position: right -25% center, right bottom;
   }
 
-  @media (max-width: 360px) {
+  @include down(sm) {
     background-position: top -83% left -60%, right bottom;
     align-items: flex-end;
   }
@@ -25,11 +26,11 @@
     padding: 5.094rem;
     align-items: flex-start !important;
 
-    @media (max-width: 768px) {
+    @include down(md) {
       padding: 1.875rem;
     }
 
-    @media (max-width: 360px) {
+    @include down(sm) {
       width: 100%;
       gap: 1.063rem !important;
       justify-content: center !important;
@@ -38,7 +39,7 @@
     }
 
     &__title {
-      @media (max-width: 360px) {
+      @include down(sm) {
         text-align: center;
       }
 
@@ -50,12 +51,12 @@
           color: $color-rose;
         }
 
-        @media (max-width: 768px) {
+        @include down(md) {
           font-size: 3rem;
           line-height: 3rem;
         }
 
-        @media (max-width: 360px) {
+        @include down(sm) {
           font-size: 2.25rem;
           line-height: 2.25rem;
         }
@@ -70,12 +71,12 @@
         color: $color-yellow;
       }
 
-      @media (max-width: 768px) {
+      @include down(md) {
         font-size: 1.375rem;
         line-height: 1.65rem;
       }
 
-      @media (max-width: 360px) {
+      @include down(sm) {
         font-size: 1rem;
         line-height: 1.2rem;
       }

@@ -23,7 +23,7 @@ const Stack: React.FC<StackProps> = ({
 }) => {
   return (
     <div
-      className={`stack stack--${direction} ${className}`}
+      className={`stack stack_${direction} ${className}`}
       style={{
         gap: `${gap}rem`,
         alignItems,

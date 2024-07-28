@@ -1,3 +1,5 @@
+@import "assets/styles/breakpoints";
+
 .content {
   flex: 1;
   display: flex;
@@ -10,12 +12,12 @@
     gap: 3.875rem !important;
     padding: 3.625rem 5rem 3.75rem;
 
-    @media (max-width: 768px) {
+    @include down(md) {
       gap: 3.438rem !important;
       padding: 3.438rem 1.875rem 3.313rem;
     }
 
-    @media (max-width: 360px) {
+    @include down(sm) {
       gap: 3.125rem !important;
       padding: 3.125rem 1.25rem;
     }
