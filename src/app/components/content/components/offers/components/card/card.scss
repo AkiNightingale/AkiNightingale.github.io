@@ -1,0 +1,49 @@
+@import "assets/styles/breakpoints";
+
+.card {
+  display: flex;
+  align-items: center;
+  border-radius: 0.625rem;
+  width: 100%;
+  height: 21.875rem; // TODO: optimize?
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+
+  &__container {
+    width: 100%;
+    padding-left: 2.188rem;
+
+    &_title {
+      font-size: 2.875rem;
+      line-height: 2.875rem;
+      width: 60%;
+
+      &.-full-size {
+        font-size: 4.625rem;
+        line-height: 4.625rem;
+      }
+
+      @include down(lg) {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+      }
+    }
+
+    &_subtitle {
+      font-size: 1.5rem;
+      line-height: 1.8rem;
+
+      &.-full-size {
+        font-size: 1.625rem;
+        line-height: 1.95rem;
+      }
+
+      @include down(lg) {
+        font-size: 1rem;
+        line-height: 1.2rem;
+      }
+    }
+  }
+}

@@ -1,3 +1,5 @@
+import React from 'react';
+
 export const breakpoints = {
   xs: 0,
   sm: 600,
@@ -6,14 +8,34 @@ export const breakpoints = {
   xl: 1536,
 };
 
-export const up = (breakpoint: keyof typeof breakpoints) => {
-  return window.innerWidth >= breakpoints[breakpoint];
+const useMediaQuery = (query: string) => {
+  const [matches, setMatches] = React.useState(() => window.matchMedia(query).matches);
+
+  React.useEffect(() => {
+    const mediaQueryList = window.matchMedia(query);
+    const documentChangeHandler = () => setMatches(mediaQueryList.matches);
+
+    mediaQueryList.addEventListener('change', documentChangeHandler);
+
+    return () => {
+      mediaQueryList.removeEventListener('change', documentChangeHandler);
+    };
+  }, [query]);
+
+  return matches;
 };
 
-export const down = (breakpoint: keyof typeof breakpoints) => {
-  return window.innerWidth < breakpoints[breakpoint];
+export const useUp = (breakpoint: keyof typeof breakpoints) => {
+  const query = `(min-width: ${breakpoints[breakpoint]}px)`;
+  return useMediaQuery(query);
 };
 
-export const between = (start: keyof typeof breakpoints, end: keyof typeof breakpoints) => {
-  return window.innerWidth >= breakpoints[start] && window.innerWidth < breakpoints[end];
+export const useDown = (breakpoint: keyof typeof breakpoints) => {
+  const query = `(max-width: ${breakpoints[breakpoint]}px)`;
+  return useMediaQuery(query);
+};
+
+export const useBetween = (start: keyof typeof breakpoints, end: keyof typeof breakpoints) => {
+  const query = `(min-width: ${breakpoints[start]}px) and (max-width: ${breakpoints[end]}px)`;
+  return useMediaQuery(query);
 };

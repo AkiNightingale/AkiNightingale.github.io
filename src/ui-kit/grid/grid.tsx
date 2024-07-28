@@ -27,8 +27,8 @@ const Grid: React.FC<GridProps> = ({
   const gridClassName = clsx(className, {
     ['grid__container']: container,
     ['grid__item']: item,
-    [`spacing-${spacing}`]: container && spacing > 0,
-    [`gap-${spacing}`]: container && spacing > 0,
+    [`spacing-${spacing.toString().replace('.', '-')}`]: container && spacing > 0,
+    [`gap-${spacing.toString().replace('.', '-')}`]: container && spacing > 0,
     [`size-${sm}`]: item && isGeneralSize,
     [`sm-${sm}`]: item && sm && !isGeneralSize,
     [`md-${md}`]: item && md && !isGeneralSize,

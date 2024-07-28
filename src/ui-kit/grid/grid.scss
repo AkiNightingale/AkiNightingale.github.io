@@ -55,14 +55,40 @@
   }
 }
 
+@function replace-dot($value) {
+  $string: unquote($value + '');
+  $new-string: '';
+  $length: str-length($string);
+
+  @for $i from 1 through $length {
+    $char: str-slice($string, $i, $i);
+
+    @if $char == '.' {
+      $new-string: #{$new-string}-;
+    } @else {
+      $new-string: #{$new-string}#{$char};
+    }
+  }
+
+  @return $new-string;
+}
+
+@function spacing-class($spacing) {
+  @return 'spacing-' + replace-dot($spacing);
+}
+
+@function gap-class($spacing) {
+  @return 'gap-' + replace-dot($spacing);
+}
+
 @for $i from 0 through 10 {
-  .spacing-#{$i} {
+  .#{spacing-class($i)} {
     margin-top: calc(-#{$i} * 0.5rem);
     margin-left: calc(-#{$i} * 0.5rem);
     width: calc(100% + calc(#{$i} * 0.5rem));
   }
 
-  .gap-#{$i} {
+  .#{gap-class($i)} {
     .grid__item {
       padding-top: calc(#{$i} * 0.5rem);
       padding-left: calc(#{$i} * 0.5rem);
