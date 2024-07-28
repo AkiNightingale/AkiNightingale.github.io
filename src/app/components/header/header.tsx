@@ -20,19 +20,19 @@ const Header: React.FC = () => {
       <img src={logo} className='header__logo' alt='logo' />
 
       <Stack
-        className='stackCustom'
+        className='header_stackCustom'
         direction='row'
         justifyContent='space-between'
       >
-        <button className='header__button'>
-          <span className='header__button-text'>Home</span>
+        <button className='header_stackCustom__button'>
+          <span className='header_stackCustom__button-text'>Home</span>
         </button>
 
-        <button className='header__button'>
-          <span className='header__button-text'>Products</span>
+        <button className='header_stackCustom__button'>
+          <span className='header_stackCustom__button-text'>Products</span>
         </button>
 
-        <span className='header__bucket-icon' />
+        <span className='header_stackCustom__bucket-icon' />
       </Stack>
 
       <img
