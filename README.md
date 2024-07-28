@@ -1,8 +1,13 @@
-# Getting Started with Create React App
+# Demo SPA Layout
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The project is written as a demonstration of layout capabilities, with minimal active functionality using React.
 
-## Available Scripts
+## Deployed on GitHub Pages
+
+Follow the link to view it:\
+[https://akinightingale.github.io/test-layout/](https://akinightingale.github.io/test-layout/)
+
+## How to run
 
 In the project directory, you can run:
 
@@ -11,36 +16,38 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `npm test`
+### This project includes:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React 18.3.1
+- TypeScript 4.9.5
+- Sass 1.77.8
+- Node 16.20.2
+- Npm 8.19.4
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Project Description
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Key Features on the Page:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Animated gradient buttons in the Header
+- A side menu appears on mobile devices, which can be opened
+- Animated interaction with the "Read more" button at the bottom of the page
+- The banner at the top of the page is created using [Multiple Backgrounds](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds) and has responsive behaviour
 
-### `npm run eject`
+### Key Points in the Code:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- The entire project is organised into folders according to the [Feature-Sliced Design (FSD)](https://feature-sliced.design/) architectural approach
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- The project contains 2 main folders: `app` - the main page and its components, `assets` - which stores images,
+  colours, breakpoints and `ui-kit`, and includes the implementation of reusable components with styles
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+- `assets -> styles` stores breakpoints for better responsiveness
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- `assets -> images -> original-svg` contains the original images from Figma, which have been further optimised using
+  [clsx](https://www.npmjs.com/package/clsx)
