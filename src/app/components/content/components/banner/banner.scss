@@ -23,7 +23,7 @@
   &_stackCustom {
     width: 60%;
     padding: 5.094rem;
-    align-items: flex-start;
+    align-items: flex-start !important;
 
     @media (max-width: 768px) {
       padding: 1.875rem;
@@ -33,26 +33,32 @@
       width: 100%;
       gap: 1.063rem !important;
       justify-content: center !important;
-      padding: 2.125rem;
+      padding: 2.75rem 0;
+      align-items: center !important;
     }
 
     &__title {
-      font-size: 4.5rem;
-      line-height: 4.5rem;
-
-      &-rose {
-        color: $color-rose;
-      }
-
-      @media (max-width: 768px) {
-        font-size: 3rem;
-        line-height: 3rem;
-      }
-
       @media (max-width: 360px) {
         text-align: center;
-        font-size: 2.25rem;
-        line-height: 2.25rem;
+      }
+
+      &_text {
+        font-size: 4.5rem;
+        line-height: 4.5rem;
+
+        &-rose {
+          color: $color-rose;
+        }
+
+        @media (max-width: 768px) {
+          font-size: 3rem;
+          line-height: 3rem;
+        }
+
+        @media (max-width: 360px) {
+          font-size: 2.25rem;
+          line-height: 2.25rem;
+        }
       }
     }
 
@@ -70,14 +76,9 @@
       }
 
       @media (max-width: 360px) {
-        text-align: center;
         font-size: 1rem;
         line-height: 1.2rem;
       }
-    }
-
-    &__btn {
-
     }
   }
 }
