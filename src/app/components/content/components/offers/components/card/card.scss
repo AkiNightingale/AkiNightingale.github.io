@@ -11,23 +11,37 @@
   background-size: cover;
   background-attachment: scroll;
 
+  @include down(lg) {
+    align-items: flex-end;
+  }
+
   &__container {
     width: 100%;
     padding-left: 2.188rem;
 
+    @include down(lg) {
+      padding: 1.688rem;
+    }
+
     &_title {
       font-size: 2.875rem;
       line-height: 2.875rem;
-      width: 60%;
+      width: 50%;
 
       &.-full-size {
+        width: 60%;
         font-size: 4.625rem;
         line-height: 4.625rem;
       }
 
       @include down(lg) {
+        width: 60%;
         font-size: 2.5rem;
         line-height: 2.5rem;
+      }
+
+      @include down(sm) {
+        width: 80%;
       }
     }
 
